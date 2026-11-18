@@ -32,6 +32,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
 
-# evolution.mk cannot see leaf-level variables (inherit-product defers parsing),
-# so drop its Pixel-ineligible AppDataBackup here, after all inherits.
-PRODUCT_PACKAGES := $(filter-out AppDataBackup,$(PRODUCT_PACKAGES))

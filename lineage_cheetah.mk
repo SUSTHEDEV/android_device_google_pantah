@@ -32,4 +32,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
 
-PRODUCT_PACKAGES := $(filter-out AppDataBackup,$(PRODUCT_PACKAGES))
