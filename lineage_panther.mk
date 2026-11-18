@@ -32,3 +32,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
 
+
+# AppDataBackup is a platform-API (platform_apis) product app; PPI makes
+# sdk_version mandatory for product modules, which is unsatisfiable there.
+PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := false
+
+# AppDataBackup is a platform-API (platform_apis) product app; PPI makes
+# sdk_version mandatory for product modules, which is unsatisfiable there.
+PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := false
