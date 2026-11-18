@@ -31,3 +31,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
+
+# AppDataBackup and its privapp whitelist install to system/priv-app, which
+# generic_system artifact path requirements reject on this tree. Allow those
+# two paths instead of splitting the app off to product.
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/priv-app/AppDataBackup/
+# AppDataBackup and its privapp whitelist install to system/priv-app, which
+# generic_system artifact path requirements reject on this tree. Allow those
+# two paths instead of splitting the app off to product.
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/priv-app/AppDataBackup/% \
+    system/etc/permissions/privapp-permissions-appbackup.xml
