@@ -5,6 +5,7 @@
 #
 
 # Inherit some common stuff
+PRODUCT_MANUFACTURER := Google
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
