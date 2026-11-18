@@ -5,7 +5,6 @@
 #
 
 # Inherit some common stuff
-PRODUCT_MANUFACTURER := Google
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
@@ -32,3 +31,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
+
+PRODUCT_PACKAGES := $(filter-out AppDataBackup,$(PRODUCT_PACKAGES))
