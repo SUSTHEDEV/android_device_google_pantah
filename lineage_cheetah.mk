@@ -42,3 +42,5 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/priv-app/DocumentsUIGoogle/% \
     system/priv-app/GooglePackageInstaller/% \
     system/priv-app/TagGoogle/%
+
+PRODUCT_COPY_FILES := $(filter-out device/google/gs201/default-permissions.xml:%,$(PRODUCT_COPY_FILES))

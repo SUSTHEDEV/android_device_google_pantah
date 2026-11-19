@@ -53,3 +53,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/priv-app/DocumentsUIGoogle/% \
     system/priv-app/GooglePackageInstaller/% \
     system/priv-app/TagGoogle/%
+
+# gs201's PRODUCT_COPY_FILES default-permissions.xml collides with the
+# vendor_gms soong module installing the same product path; keep the gms one.
+PRODUCT_COPY_FILES := $(filter-out device/google/gs201/default-permissions.xml:%,$(PRODUCT_COPY_FILES))
