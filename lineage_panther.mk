@@ -43,3 +43,13 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/priv-app/AppDataBackup/% \
     system/etc/permissions/privapp-permissions-appbackup.xml
+
+# Pixel gms modules that vendor/gms installs to system/; allowed for the
+# generic_system artifact path requirement like upstream's
+# privapp-permissions-google.xml entry.
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/% \
+    system/app/GooglePrintRecommendationService/% \
+    system/priv-app/DocumentsUIGoogle/% \
+    system/priv-app/GooglePackageInstaller/% \
+    system/priv-app/TagGoogle/%

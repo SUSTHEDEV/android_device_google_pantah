@@ -35,3 +35,10 @@ $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/priv-app/AppDataBackup/% \
     system/etc/permissions/privapp-permissions-appbackup.xml
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/% \
+    system/app/GooglePrintRecommendationService/% \
+    system/priv-app/DocumentsUIGoogle/% \
+    system/priv-app/GooglePackageInstaller/% \
+    system/priv-app/TagGoogle/%
